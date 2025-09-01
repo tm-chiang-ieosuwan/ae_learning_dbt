@@ -1,0 +1,38 @@
+version: 2
+models:
+  - name: fact_sales
+    description: Fact table at order-item level.
+    columns:
+      - name: order_item_id
+        tests: [not_null, unique]
+      - name: gross_revenue
+
+  - name: fact_inventory
+    description: Fact table for inventory lifecycle (items sold or unsold).
+    columns:
+      - name: inventory_item_id
+        tests: [not_null, unique]
+
+  - name: fact_events
+    description: Fact table of user events for digital attribution.
+    columns:
+      - name: event_id
+        tests: [not_null, unique]
+
+  - name: dim_users
+    description: Dimension of users/customers.
+    columns:
+      - name: user_id
+        tests: [not_null, unique]
+
+  - name: dim_products
+    description: Dimension of products.
+    columns:
+      - name: product_id
+        tests: [not_null, unique]
+
+  - name: dim_orders
+    description: Dimension of orders.
+    columns:
+      - name: order_id
+        tests: [not_null, unique]

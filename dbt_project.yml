@@ -1,0 +1,28 @@
+# Project name
+name: 'ae_learning'
+version: '1.0.0'
+
+# Which profile to use
+profile: 'ae_learning'
+
+# Paths
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+# Folders to clean with `dbt clean`
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Model configurations
+models:
+  ae_learning:
+    staging:              
+      +materialized: view
+      
+    marts:                
+      +materialized: table 
