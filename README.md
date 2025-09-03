@@ -23,12 +23,14 @@ We follow a **layered architecture**:
 * Defined in `models/sources/thelook_sources.yml`
 * Point to the **public BigQuery dataset**:
 
-  * `bigquery-public-data.thelook_ecommerce.orders`
-  * `bigquery-public-data.thelook_ecommerce.order_items`
-  * `bigquery-public-data.thelook_ecommerce.products`
-  * `bigquery-public-data.thelook_ecommerce.users`
+  * `bigquery-public-data.thelook_ecommerce.distribution_centers`
   * `bigquery-public-data.thelook_ecommerce.events`
   * `bigquery-public-data.thelook_ecommerce.inventory_items`
+  * `bigquery-public-data.thelook_ecommerce.order_items`
+  * `bigquery-public-data.thelook_ecommerce.orders`
+  * `bigquery-public-data.thelook_ecommerce.products`
+  * `bigquery-public-data.thelook_ecommerce.thelook_ecommerce-table`
+  * `bigquery-public-data.thelook_ecommerce.users`
 
 ### 2. **Staging Layer**
 
